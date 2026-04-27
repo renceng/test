@@ -81,6 +81,10 @@ function loop() {
 }
 
 document.addEventListener('keydown', function(e) {
+  if ([37, 38, 39, 40].includes(e.which)) {
+    e.preventDefault();
+  }
+
   if (e.which === 37 && dx === 0) {
     dx = -grid;
     dy = 0;
