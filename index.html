@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>贪吃蛇游戏</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="game-shell">
+    <section class="hero">
+      <p class="eyebrow">Classic Snake</p>
+      <h1>贪吃蛇游戏</h1>
+      <p class="subtitle">使用方向键或 WASD 控制蛇移动，吃到食物得分，撞墙或撞到自己游戏结束。</p>
+    </section>
+
+    <section class="hud" aria-label="游戏状态">
+      <div class="stat">
+        <span>得分</span>
+        <strong id="score">0</strong>
+      </div>
+      <div class="stat">
+        <span>最高分</span>
+        <strong id="best-score">0</strong>
+      </div>
+      <button id="start-button" type="button">开始游戏</button>
+    </section>
+
+    <section class="board-wrap">
+      <canvas id="game" width="480" height="480" aria-label="贪吃蛇游戏画布"></canvas>
+      <div id="overlay" class="overlay">
+        <h2>准备开始</h2>
+        <p>点击“开始游戏”或按空格键。</p>
+      </div>
+    </section>
+
+    <section class="mobile-controls" aria-label="移动端控制">
+      <button data-direction="up" aria-label="向上">▲</button>
+      <div>
+        <button data-direction="left" aria-label="向左">◀</button>
+        <button data-direction="down" aria-label="向下">▼</button>
+        <button data-direction="right" aria-label="向右">▶</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
